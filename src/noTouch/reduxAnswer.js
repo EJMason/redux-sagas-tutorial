@@ -13,9 +13,13 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
     
 */
 
+// import { helloReducer } from './1/firstReducer'
 
 
-const rootReducer = null
+const rootReducer = combineReducers({
+    hello: helloReducer,
+})
+//const rootReducer = null
 
 
 
@@ -25,7 +29,7 @@ const rootReducer = null
 
     second param: applyMiddleware(logger)
 */
-
+export const store = createStore(rootReducer, applyMiddleware(logger))
 // export const store = null
 
 

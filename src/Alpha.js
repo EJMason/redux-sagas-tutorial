@@ -21,6 +21,9 @@ class Alpha extends Component {
         }
     }
 
+    /**
+     * Dont worry about this....
+     */
     componentDidUpdate() {
         if (this.props.fin) {
             this.props.checker()
@@ -35,6 +38,7 @@ class Alpha extends Component {
     reduxButton = (e) => {
         e.preventDefault()
 
+        // COMPLETE THIS HERE!!!!
         console.log('Button Clicked')
     }
 

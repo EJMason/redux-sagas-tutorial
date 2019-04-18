@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import Tabler from './noTouch/Tabler'
-
 import { Header, Segment, Button } from 'semantic-ui-react'
+import Tabler from './noTouch/Tabler'
 
 
 
@@ -15,23 +14,11 @@ import { Header, Segment, Button } from 'semantic-ui-react'
 
 class Beta extends Component {
 
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            textBox: ''
-        }
-    }
-
-    controlTextBox = (e, data) => {
-        this.setState({ textBox: data.value })
-    }
 
 
     reduxButton = (e) => {
         e.preventDefault()
 
-        console.log('Button Clicked')
     }
 
 

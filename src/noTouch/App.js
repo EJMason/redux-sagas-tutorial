@@ -13,7 +13,7 @@ class App extends Component {
 
     // todo change it back
     this.state = {
-      alphaComplete: true
+      alphaComplete: false
     }
 
   }
@@ -37,7 +37,15 @@ class App extends Component {
         <Container>
           {this.Header()}
 
+
+
+
           <Alpha true checker={this.alphaComplete} />
+
+
+
+
+
 
           {(this.state.alphaComplete) ? <Beta /> : null}
 
