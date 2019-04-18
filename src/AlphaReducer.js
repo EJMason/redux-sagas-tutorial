@@ -12,6 +12,7 @@ export const firstAction = 'FIRST'
 
 
 const initialState = {
+    fin: true, // just ignore this
     first: false,
 }
 

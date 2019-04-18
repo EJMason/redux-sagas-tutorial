@@ -6,7 +6,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
     First we need to import our reducers and combine them INTO A SINGLE STORE,
     usually this is in a separate file, but for simplicity we will combine them here.
 
-    TODO: Implement the HELLO reducer. see ./1/firstReducer
+    TODO: Implement the HELLO reducer.
     TODO: use combineReducers and add your helloReducer with 'hello' as the key
     
     See this for help. https://redux.js.org/api/combinereducers
@@ -17,7 +17,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux'
 
 
 const rootReducer = combineReducers({
-    hello: helloReducer
+    hello: helloReducer,
 })
 //const rootReducer = null
 

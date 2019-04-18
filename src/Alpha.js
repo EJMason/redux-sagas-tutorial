@@ -7,6 +7,7 @@ import { Input, Header, Segment, Button } from 'semantic-ui-react'
  * Create first reducer
  * Link up with boilerplate
  * Add the provider
+ * Bonus: Create an action creator
  */
 
 class Alpha extends Component {
@@ -15,12 +16,19 @@ class Alpha extends Component {
         super(props)
 
         this.state = {
-            textBox: ''
+            textBox: '',
+            isFinished: false,
+        }
+    }
+
+    componentDidUpdate() {
+        if (this.props.fin) {
+            this.props.checker()
         }
     }
 
     controlTextBox = (e, data) => {
-        this.setState({ textBox: data.value })
+        this.setState({ ...this.state, textBox: data.value })
     }
 
     

@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import { Container, Header, Segment } from 'semantic-ui-react'
+import { Container, Header } from 'semantic-ui-react'
 import Alpha from '../Alpha'
+import Beta from '../Beta'
 
 
 class App extends Component {
+
+  constructor(props) {
+    super(props)
+
+    // todo change it back
+    this.state = {
+      alphaComplete: true
+    }
+
+  }
 
   Header = () => (
     <Header size='huge' color='teal' dividing>
@@ -13,13 +24,24 @@ class App extends Component {
     </Header>
   )
 
+  alphaComplete = () => {
+    this.setState({
+      ...this.state,
+      alphaComplete: true
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <Container>
           {this.Header()}
-          <Alpha />
 
+          <Alpha true checker={this.alphaComplete} />
+
+          {(this.state.alphaComplete) ? <Beta /> : null}
+
+          
 
 
 
